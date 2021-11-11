@@ -38,8 +38,8 @@ export default {
     onClick(id) {
       window.location.href = `user/${id}`;
     },
-        onBack() {
-      window.location.href = '/';
+    onBack() {
+      window.location.href = "/";
     },
     async fetch() {
       const result = await this.$axios.get(
@@ -48,8 +48,6 @@ export default {
       this.oompaDetails = result.data.results.filter(
         (result) => result.first_name === this.idOompa
       );
-
-      console.log("oompa", this.oompaDetails);
     },
   },
   mounted() {
@@ -59,11 +57,11 @@ export default {
 </script>
 <style scoped>
 .oompa-component-title-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    background: grey;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  background: grey;
+  align-items: center;
 }
 .oompa-component-container {
   display: flex;
@@ -74,10 +72,9 @@ export default {
 }
 .oompa-component-back {
   cursor: pointer;
-    margin-right: 10px;
-    width: 50px;
-height: 44px;
-
+  margin-right: 10px;
+  width: 50px;
+  height: 44px;
 }
 .oompa-details-container {
   margin-left: 10px;
